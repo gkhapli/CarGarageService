@@ -1,13 +1,13 @@
-package com.cargarage.CargarageService;
+package com.cargarage.services;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CargarageServiceApplication {
+public class CargarageApplication{
 
 	public static void main(String[] args) {
-		SpringApplication.run(CargarageServiceApplication.class, args);
+		SpringApplication.run(CargarageApplication.class, args);
 	}
 
 }
