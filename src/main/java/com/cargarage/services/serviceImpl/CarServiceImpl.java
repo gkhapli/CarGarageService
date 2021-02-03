@@ -37,7 +37,6 @@ public class CarServiceImpl implements CarService {
 			carDTO.setLocation(cars.getLocation());
 			List<Vehicle> vehicles = cars.getVehicles();
 			//Transforming the Vehicle list to DTO list
-			
 			for (Vehicle vehicle : vehicles) {
 				VehicleDTO vehicleDTO = new VehicleDTO();
 				vehicleDTO.setId(vehicle.getId());
@@ -45,6 +44,7 @@ public class CarServiceImpl implements CarService {
 				vehicleDTO.setModel(vehicle.getModel());
 				vehicleDTO.setPrice(vehicle.getPrice());
 				vehicleDTO.setYearModel(vehicle.getYearModel());
+				//Parsing the String Date to LocalDate
 				vehicleDTO.setDateAdded(LocalDate.parse(vehicle.getDateAdded()));
 				vehicleDTO.setLicensed(vehicle.isLicensed());
 				vehicleDTO.setLocation(cars.getLocation());
@@ -52,10 +52,9 @@ public class CarServiceImpl implements CarService {
 			}
 		}
 		
-		//Sort the Date based in the ascending order per warehouse.
+		//Sort the Date based in the ascending order
 		Collections.sort(vehicleDTOs, (date1, date2) -> date1.getDateAdded().compareTo(date2.getDateAdded()));
 
-		
 		return vehicleDTOs;
 	}
 
