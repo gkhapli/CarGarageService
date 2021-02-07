@@ -1,4 +1,7 @@
-**Title**Car Details API
+**Title**
+Car Details API
+
+* **Description**
 The API fetches the Car Details from the JSON database stored in the MongoDB sorted by the dateAdded date in ascending order.
 
 * **URL**
