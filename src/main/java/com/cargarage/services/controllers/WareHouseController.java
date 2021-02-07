@@ -3,6 +3,8 @@ package com.cargarage.services.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,8 +31,13 @@ public class WareHouseController {
 	@CrossOrigin
 	@Loggable
 	@GetMapping(value = "/cars")
-    public List<VehicleDTO> getCars() {
-        return carService.getCars();
+    public ResponseEntity<List<VehicleDTO>> getCars() {
+		List<VehicleDTO> vehicleList = carService.getCars();
+		if(!vehicleList.isEmpty()) {
+			return new ResponseEntity<List<VehicleDTO>>(vehicleList, HttpStatus.OK);
+		}else {
+			return new ResponseEntity<List<VehicleDTO>>(vehicleList,HttpStatus.NO_CONTENT);
+		}
     }
 
 }
