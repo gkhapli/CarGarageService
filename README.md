@@ -24,4 +24,4 @@ Car Details API
   _If the data is not available we would receive we will receive 404 response code._
 
   * **Code:** 404 NODATAFOUND <br />
-    **Content:** `{ error : "No Data Found" }`
+    **Content:** `{ [] }`
