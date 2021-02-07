@@ -15,7 +15,6 @@ import com.cargarage.services.service.CarService;
  * @author Gaurav Khapli
  * This class is the Controller class which will have all the API's for interacting with the MongoDb.
  */
-@CrossOrigin
 @RestController
 public class WareHouseController {
 
@@ -27,6 +26,7 @@ public class WareHouseController {
 	 * @return dto object of Car Object
 	 */
 	
+	@CrossOrigin
 	@Loggable
 	@GetMapping(value = "/cars")
     public List<VehicleDTO> getCars() {

@@ -48,6 +48,7 @@ public class CarServiceImpl implements CarService {
 				vehicleDTO.setDateAdded(LocalDate.parse(vehicle.getDateAdded()));
 				vehicleDTO.setLicensed(vehicle.isLicensed());
 				vehicleDTO.setLocation(cars.getLocation());
+				vehicleDTO.setWarehouse(wareHouse.getName());
 				vehicleDTOs.add(vehicleDTO);
 			}
 		}

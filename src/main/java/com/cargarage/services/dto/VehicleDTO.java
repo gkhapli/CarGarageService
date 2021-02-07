@@ -27,4 +27,5 @@ public class VehicleDTO {
 	private boolean licensed;
 	private LocalDate dateAdded;
 	private String location;
+	private String warehouse;
 }
